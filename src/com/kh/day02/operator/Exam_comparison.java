@@ -13,11 +13,11 @@ public class Exam_comparison {
 		int num2 = 30;
 		boolean result = num1< num2;
 		System.out.println("(num1 < num2)의 결과 : " + result);
-		result = (num1 > num2);
+		result = num1 > num2;
 		System.out.println("(num1 > num2)의 결과 : " + result);
-		result = (num1 == num2);
+		result = num1 == num2;
 		System.out.println("(num1 == num2)의 결과 : " + result);
-		result = (num1 != num2);
+		result = num1 != num2;
 		System.out.println("(num1 != num2)의 결과 : " + result);
 		
 		//짝홀 판별 프로그램에서 보통 사용함.
