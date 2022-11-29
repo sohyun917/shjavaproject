@@ -14,7 +14,7 @@ public class Exercise_While2 {
 			int i = 1;
 			while (i <=9) {
 				System.out.println(num + " * " + i + " = " + num*i);
-				i++;
+				i++;  //¡Ú¡Ú¡ÚÁß¿ä¡Ú¡Ú¡Ú
 			}
 		}
 		else {
