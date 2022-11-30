@@ -95,4 +95,18 @@ public class Exercise_Array {
 		}
 	}
 
+	//forEach문1
+	//forEach문은 인덱스값을 컨트롤하기 어려워. 전부 다 출력할때만 씀.
+	public void exercise6() {
+		int [] nums = {1, 2, 3, 4, 5};
+		for(int num : nums) {
+			System.out.print(num + " ");
+		}
+	}
+	public void exercise7() {
+		String [] fruits = {"딸기", "복숭아", "포도", "체리", "망고"};
+		for(String fruit : fruits) {
+			System.out.print(fruit + " ");
+		}
+	}
 }

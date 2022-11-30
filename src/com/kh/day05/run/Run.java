@@ -11,7 +11,7 @@ public class Run {
 //		Exercise_While exWhile = new Exercise_While(); //클래스명적고 new적고 클래스명적기
 //		exWhile.exercise2();
 		Exercise_Array exArray = new Exercise_Array();
-		exArray.exercise5();
+		exArray.exercise7();
 		
 	}
 }
