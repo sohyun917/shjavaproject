@@ -19,7 +19,7 @@ public class MyBubble {
 //				 1, 2, 3, 4, 5	
 		int [] arrs = {2, 5, 4, 1, 3};
 		for(int i = 0; i < arrs.length-1; i++) {
-			for(int j = 0 ; j < arrs.length-1; j++) {
+			for(int j = 0 ; j < (arrs.length-1)-i; j++) {
 				if(arrs[j] > arrs[j+1]) {
 					int temp = arrs[j];
 					arrs[j] = arrs[j+1];

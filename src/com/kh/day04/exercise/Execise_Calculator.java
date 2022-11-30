@@ -14,7 +14,7 @@ public class Execise_Calculator {
 		int result = 0;
 		//연산자 판별 후 연산 수행 그리고 결과 저장
 		
-		switch(operator) {
+		switch(operator){
 			case '+' :
 				result = num1 + num2;
 				break;
