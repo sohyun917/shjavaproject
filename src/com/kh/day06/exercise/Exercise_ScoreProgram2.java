@@ -14,7 +14,7 @@ public class Exercise_ScoreProgram2 {
 			int choice = sc.nextInt();
 			switch(choice) {
 				case 1 : 
-					inputScore();
+					inputScore(); //컨트롤 누르고 메소드 누르면 바로 볼 수 있다.
 					break;
 				case 2 : 
 					printScore();
