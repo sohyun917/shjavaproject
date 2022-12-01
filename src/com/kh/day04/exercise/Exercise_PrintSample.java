@@ -4,7 +4,7 @@ public class Exercise_PrintSample {
 	public static void main(String [] args) {
 		//System.out.println에서 정수 + 문자열 -> 문자열
 		System.out.println(1 + "1");
-		//문자 + 문자 -> 문자
+		//문자 + 문자 -> 문자(1의 ASCII 코드값이 49)
 		System.out.println('1' + '1');
 		//정수 + 정수 + 문자열 + 정수 -> 최종적으로는 문자열
 		System.out.println(10 + 20 + "Hello" + 10);

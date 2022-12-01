@@ -20,5 +20,12 @@ public class Exercise_ForDouble3 {
 			System.out.println("");
 			num++;
 		}
+		
+//		for(int i = 1; i <= 10; i++) {
+//			for(int j = 0; j < i; j++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		} ->내가 만든 코드(이것도 똑같이 나옴)
 	}
 }
