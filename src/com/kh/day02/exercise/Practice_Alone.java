@@ -5,13 +5,20 @@ import java.util.Scanner;
 
 public class Practice_Alone {
 	public static void main(String [] args) {
-		// while문을 이용하여 1 ~ 100 사이의 홀수의 합을 출력하시오.
-		int sum = 0;
-		for(int i = 1; i <= 100; i++) {
-			if(i%2 != 0) {
-				sum = sum + i;
+		//{2, 5, 4, 1, 3}
+		int [] arrs = {2, 5, 4, 1, 3};
+		for(int i = 1; i < arrs.length; i++) {
+			for(int j = i; j > 0; j--) {
+				if(arrs[j-1] > arrs[j]) {
+					int temp = arrs[j-1];
+					arrs[j-1] = arrs[j];
+					arrs[j] = temp;
+				}
 			}
-		}System.out.println(sum);
+		}
+		for(int i = 0; i < arrs.length; i++) {
+			System.out.print(arrs[i] + " ");
+		}
 	}
 
 }

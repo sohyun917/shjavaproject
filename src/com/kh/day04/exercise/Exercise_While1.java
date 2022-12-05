@@ -6,7 +6,7 @@ public class Exercise_While1 {
 		int a = 1;
 		int sum = 0;
 		while (a < 100) {
-			sum += 1;
+			sum += a;
 			a += 2;
 		}
 		System.out.print("гу╟Х : " + sum);
