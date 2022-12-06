@@ -20,8 +20,8 @@ class SubClass extends SuperClass{
 }
 public class Exercise_Overriding {
 	public static void main(String [] args) {
-		SuperClass ex = new SubClass();
-		ex.paint();
+		SuperClass ex = new SubClass();	//업캐스팅
+		ex.paint();						//부모타입 변수 ex
 	}
 
 }
