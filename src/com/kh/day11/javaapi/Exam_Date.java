@@ -10,7 +10,7 @@ public class Exam_Date {
 		Date date = new Date();
 		System.out.println(date);
 		SimpleDateFormat trans = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss"); //포맷을 바꿔주는 기능을 함.
-		SimpleDateFormat trans2 = new SimpleDateFormat("yyyy/MM/dd HH:mm:SS"); //SS는 밀리초, ss가 초(대소문자 구분 필수)
+		SimpleDateFormat trans2 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SS"); //SS는 밀리초, ss가 초(대소문자 구분 필수)
 		String transDate1 = trans.format(date);
 		String transDate2 = trans2.format(date);
 		System.out.println(transDate1);
