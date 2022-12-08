@@ -23,7 +23,8 @@ public class Exam_BufferedStream {
 				bout.write(readChar);
 			}
 			new Scanner(System.in).nextLine();
-			bout.flush();
+			bout.flush();	//5개를 읽고 나서는 5개가 다 채워지지 않아서 한번에 출력X
+			//엔터를 쳐주면 flush가 버퍼를 채워서 비우기 때문에 나머지가 출력된다.
 			bout.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
