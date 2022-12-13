@@ -36,7 +36,7 @@ public class StudentFunction {
 		int eng = sc.nextInt();
 		System.out.print("수학점수 입력 : ");
 		int math = sc.nextInt();
-		//student = new Student(name, kor, eng, math);
+//		student = new Student(name, kor, eng, math);
 		student.setName(name);
 		student.setKor(kor);
 		student.setEng(eng);
