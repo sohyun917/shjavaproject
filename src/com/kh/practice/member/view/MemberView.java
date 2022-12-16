@@ -65,12 +65,21 @@ public class MemberView {
 		return member;	//값이 사라지지 않게 하려구 return을 선언하여 다른 클래스에서 사용가능하게함.
 	}
 	
-	public String inputMemberId() {
+	public void displaySuccess(String message) {
+		System.out.println("[처리 결과] : " + message);
+	}
+	
+	public void displayError(String message) {
+		System.out.println("[오류 발생] : " + message);
+	}
+	
+	public String inputMemberId(String category) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("검색할 아이디 입력 : ");
+		System.out.print(category + "할 아이디 입력 : ");
 		String memberId = sc.next();
 		return memberId;
 	}
+	
 	public String inputMemberName() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("검색할 이름 입력 : ");
@@ -98,22 +107,45 @@ public class MemberView {
 //	public void printOneById(Member mOne) {
 //		System.out.println(mOne.toString());
 //	}
-	public void printOneById(Member mOne) {
-		System.out.println("=== === === 해당 회원정보 조회 === === ===");
+	public void showOneMember(Member mOne) {
+		System.out.println("=== === === 회원정보 상세조회 === === ===");
+		System.out.println("회원 아이디 : " + mOne.getMemberId());
+		System.out.println("회원 이름 : " + mOne.getMemberName());
+		System.out.println("회원 성별 : " + mOne.getMemberGender());
+		System.out.println("회원 나이 : " + mOne.getMemberAge());
+		System.out.println("회원 이메일 : " + mOne.getMemberEmail());
+		System.out.println("회원 폰번호 : " + mOne.getMemberPhone());
+		System.out.println("회원 주소 : " + mOne.getMemberAddress());
+		System.out.println("회원 취미 : " + mOne.getMemberHobby());
+		System.out.println("=== === === === === === === === === ===");	
 //			System.out.println(mOne.toString()); toString은 그냥 확인하려고 써본다.
-			System.out.println("회원 아이디 : " + mOne.getMemberId());
-			System.out.println("회원 이름 : " + mOne.getMemberName());
-			System.out.println("회원 성별 : " + mOne.getMemberGender());
-			System.out.println("회원 나이 : " + mOne.getMemberAge());
-			System.out.println("회원 이메일 : " + mOne.getMemberEmail());
-			System.out.println("회원 폰번호 : " + mOne.getMemberPhone());
-			System.out.println("회원 주소 : " + mOne.getMemberAddress());
-			System.out.println("회원 취미 : " + mOne.getMemberHobby());
-			System.out.println("=== === === === === === === === === ===");	
 			}
 	
-	public void printOneByName(Member mOne) {
-		System.out.println(mOne.toString());
+	public Member modifyMember() {
+		Scanner sc = new Scanner(System.in);	//입력하는부분
+		System.out.print("아이디 : ");
+		String memberId = sc.next();
+		System.out.print("비밀번호 : ");
+		String memberPwd = sc.next();
+		System.out.print("이메일 : ");
+		String memberEmail = sc.next();
+		System.out.print("전화번호 : ");
+		String memberPhone = sc.next();
+		System.out.print("주소 : ");
+		sc.nextLine();
+		String memberAddress = sc.nextLine();
+		System.out.print("취미 : ");
+		String memberHobby = sc.next();
+		Member member = new Member();	//저장하는부분
+		member.setMemberId(memberId);
+		member.setMemberPwd(memberPwd);
+		member.setMemberEmail(memberEmail);
+		member.setMemberPhone(memberPhone);
+		member.setMemberAddress(memberAddress);
+		member.setMemberHobby(memberHobby);
+		return member;
 	}
+	
+
 
 }

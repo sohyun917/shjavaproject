@@ -17,6 +17,26 @@ public class MemberController {
 		mList.add(member);	//객체연결
 	}
 	
+	public void updateMember(Member member) {	//입력한 값이 있는 member
+		for(int i = 0; i < mList.size(); i++) {
+			String memberId = member.getMemberId();
+			Member storedMember = mList.get(i);
+			String storedId = storedMember.getMemberId();
+			if(storedId.equals(memberId)) {
+				storedMember.setMemberPwd(member.getMemberPwd());
+				storedMember.setMemberEmail(member.getMemberEmail());
+				storedMember.setMemberPhone(member.getMemberPhone());
+				storedMember.setMemberAddress(member.getMemberAddress());
+				storedMember.setMemberHobby(member.getMemberHobby());
+				
+			}
+		}
+	}
+
+	public void removeMember(int index) {
+		mList.remove(index);
+	}
+	
 	public List<Member> printAllMember() {
 		return mList;
 	}
@@ -30,7 +50,7 @@ public class MemberController {
 			Member mOne = mList.get(i);
 			//넘겨받은 memberId가 mOne에 있는지 확인
 			if(memberId.equals(mOne.getMemberId())) {
-				return i;	//인덱스값을 MemberView쪽으로 보내준다.
+				return i;	//인덱스값을 MemberView쪽으로 보내는게 아니라 밑으로 보낸다.
 			}
 		}
 		return -1;
@@ -41,18 +61,32 @@ public class MemberController {
 		return member;
 	}
 	
-	public int findMemberName(String memberName) {
+	public Member findMemberName(String memberName) {
 		for(int i = 0; i < mList.size(); i++) {
 			Member mOne = mList.get(i);
 			if(memberName.equals(mOne.getMemberName())) {
-				return i;
+				return mOne;
 			}
 		}
-		return -1;
+		return null;
 	}
 	
 	public Member printNameByIndex(int index) {
 		Member member = mList.get(index);
 		return member;
 	}
+	
+	public int findMemberIndex(String memberId) {
+		for(int i = 0; i < mList.size(); i++) {
+			//memberId와 같은 데이터가
+			//mList에 있는지 찾아보기!
+			Member mOne = mList.get(i);
+			//넘겨받은 memberId가 mOne에 있는지 확인
+			if(memberId.equals(mOne.getMemberId())) {
+				return i;	//인덱스값을 MemberView쪽으로 보내는게 아니라 밑으로 보낸다.
+			}
+		}
+		return -1;
+	}
+	
 }
