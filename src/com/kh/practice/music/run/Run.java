@@ -43,7 +43,7 @@ public class Run {
 			case 6 : 
 				//이름 받기
 				title = view.inputMusicName("수정");
-				//이름으로 인덱스 검색
+				//이름으로 인덱스 검색, 존재 여부 체크용
 				index = mCon.searchOneByName(title);
 				//인덱스로 데이터 가져오기
 				//music = mCon.selectOneByIndex(index);
