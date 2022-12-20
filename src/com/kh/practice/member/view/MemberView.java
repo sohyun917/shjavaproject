@@ -145,7 +145,4 @@ public class MemberView {
 		member.setMemberHobby(memberHobby);
 		return member;
 	}
-	
-
-
 }

@@ -42,6 +42,19 @@ public class MusicController {
 		mList.set(index, music);
 	}
 	/**
+	 * 이름으로 음악 목록 검색
+	 * @param title
+	 */
+	public List<Music> searchMusicByName(String title) {
+		List<Music> findList = new ArrayList<Music>();
+		for (Music mOne : mList) {
+			if (mOne.getTitle().equals(title)) {
+				findList.add(mOne);
+			}
+		}
+		return findList;
+	}
+	/**
 	 * 이름으로 인덱스 조회
 	 * @param musicName
 	 * @return
@@ -71,4 +84,70 @@ public class MusicController {
 		return mList;
 	}
 	
+	public void sortByTitleASC() {
+		//정렬하기
+//		int [] nums = {4, 3, 2, 1};
+		for(int i = 0; i < mList.size(); i++) {
+			for(int e = 0; e < i; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				//String은 < 로 대소비교를 할 수 없다.
+				if(mOne.getTitle().compareTo(mTwo.getTitle()) < 1) {
+					Music temp = mOne;
+					mList.set(i, mTwo);
+					mList.set(e, temp);
+				}
+				
+//				if(nums[i] > nums[i+1]) {
+//					int temp = nums[i];
+//					nums[i] = nums[i+1];
+//					nums[i+1] = temp;
+//				}
+			}
+		}
+	}
+	
+	public void sortByTitleDESC() {
+		//정렬하기
+		for(int i = 0; i < mList.size(); i++) {
+			for(int e = 0; e < i; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				if(mOne.getTitle().compareTo(mTwo.getTitle()) > 1) {
+					Music temp = mOne;
+					mList.set(i, mTwo);
+					mList.set(e, temp);
+				}
+				
+			}
+		}
+	}
+	
+	public void sortBySingerASC() {
+		for(int i = 0; i < mList.size(); i++) {
+			for(int e = 0; e < i ; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				if(mOne.getSinger().compareTo(mTwo.getSinger()) < 1) {
+					Music temp = mOne;
+					mList.set(i, mTwo);
+					mList.set(e, temp);
+				}
+			}
+		}
+	}
+	
+	public void sortBySingerDESC() {
+		for(int i = 0; i < mList.size(); i++) {
+			for(int e = 0; e < i ; e++) {
+				Music mOne = (Music)mList.get(i);
+				Music mTwo = (Music)mList.get(e);
+				if(mOne.getSinger().compareTo(mTwo.getSinger()) > 1) {
+					Music temp = mOne;
+					mList.set(i, mTwo);
+					mList.set(e, temp);
+				}
+			}
+		}
+	}
 }
